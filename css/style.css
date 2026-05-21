@@ -1,0 +1,378 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --blue-bg: #036;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+/* ================== */
+/*       HEADER       */
+/* ================== */
+header {
+    width: 100%;
+    padding: 20px;
+    background-color: #003366;
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 20px;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+}
+
+nav a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+    outline: 2px solid white;
+}
+
+/* ================== */
+/*       MAIN         */
+/* ================== */
+main {
+    flex: 1;
+    font-size: 18px;
+}
+
+.intro{
+    width: 100%;
+    padding: 10px 2%;
+}
+
+/* ================== */
+/*   ENTREVISTAS      */
+/* ================== */
+.entrevistas{
+    width: 100%;
+    padding: 30px 10px;
+    margin-top: 30px;
+    text-align: center;
+    background-color: var(--blue-bg);
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.entrevistas h2{
+    color: goldenrod;
+}
+
+.carrossel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.carrossel-container {
+    width: 100%;
+    max-width: 700px;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    background: var(--card-bg, #fff);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.slide.active {
+    display: block;
+}
+
+.prev, .next {
+    cursor: pointer;
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: white;
+}
+
+.entrevistas a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.2s;
+}
+
+a:hover{
+    border-bottom: 2px solid white;
+}
+
+/* ================== */
+/*   TECNOLOGIA       */
+/* ================== */
+.tecnologia{
+    padding: 2%;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.card p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.card a {
+    text-decoration: none;
+    color: #003366;
+    font-weight: bold;
+}
+
+.tecnologia button{
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgb(144, 144, 144);
+    transition: 0.2s;
+}
+
+.tecnologia button:hover{
+    transform: translateY(-5px);
+}
+
+.tecnologia a{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+/* ================== */
+/*     FOOTER         */
+/* ================== */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ================== */
+/* TECNOLOGIA PAGE    */
+/* ================== */
+h2{
+    text-align: center;
+    margin: 20px 0;
+}
+
+main > p{
+    text-align: center;
+    width: 100%;
+}
+
+h3{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.categoria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 1100px;
+}
+
+.card-tecnologia {
+    background-color: var(--card-bg, #ffffff);
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease;
+}
+
+.card-tecnologia:hover {
+    transform: translateY(-5px);
+}
+
+details {
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 6px;
+    background: rgba(0,0,0,0.05);
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.img-tecnologia{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.texto-tecnologia h4 {
+    font-size: 18px;
+}
+
+.texto-tecnologia p {
+    font-size: 14px;
+}
+
+/* ================== */
+/* ENTREVISTAS PAGE   */
+/* ================== */
+.entrevistado {
+    width: 70%;
+    margin: 40px auto;
+    padding: 25px;
+    background: var(--card-bg, #ffffff);
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s;
+}
+
+.entrevistado:hover {
+    transform: scale(1.02);
+}
+
+.entrevistado h3 {
+    margin-bottom: 20px;
+    color: goldenrod;
+    font-size: 1.5rem;
+}
+
+.qa {
+    margin-bottom: 20px;
+    padding: 12px 15px;
+    border-left: 4px solid goldenrod;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 6px;
+}
+
+.qa.destaque {
+    background: linear-gradient(135deg, #f5f5f5, #ffffff);
+    border-left: 4px solid #0077ff;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.pergunta {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.resposta {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ========================= */
+/*     RESPONSIVIDADE        */
+/* ========================= */
+
+@media (max-width: 1024px) {
+    .carrossel-container {
+        width: 90%;
+    }
+
+    .entrevistado {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 18px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        font-size: 16px;
+    }
+
+    .carrossel {
+        flex-direction: column;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .img-tecnologia {
+        height: 150px;
+    }
+
+    .entrevistado {
+        width: 95%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 16px;
+    }
+
+    main {
+        font-size: 15px;
+    }
+
+    .texto-tecnologia h4 {
+        font-size: 16px;
+    }
+
+    .texto-tecnologia p {
+        font-size: 13px;
+    }
+}

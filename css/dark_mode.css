@@ -1,0 +1,122 @@
+:root{
+    --bg-color: black;
+    --text-color: white;
+}
+
+[data-theme="dark"]{
+    background-color: #1b1b2b;
+    color: white;
+}
+
+[data-theme="dark"] .entrevistas {
+    background-color: #121212; /* fundo escuro padrão */
+    box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .entrevistas h2 {
+    color: #FFD700; /* mantém o dourado, funciona bem no dark */
+}
+
+[data-theme="dark"] .pergunta-box {
+    background-color: #1e1e1e; /* substitui var(--blue-bg) */
+    color: #f1f1f1;
+
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8);
+}
+
+[data-theme="dark"] .tecnologia-card {
+    background-color: #1e1e1e;
+    color: white;
+    box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+}
+
+.switch{
+    position: fixed;
+    bottom: 80px;
+    right: 2%;
+
+    width: 50px;
+    height: 25px;
+
+    border-radius: 25px;
+    background-color: #444;
+    box-shadow: 2px 0px 20px rgba(255, 226, 40, 0.959);
+}
+
+.switch input{
+    display: none;
+}
+
+.slider{
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+    background-color: #4A90E2;
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.slider::before{
+    content: "";
+    position: absolute;
+    top: 2.5px;
+    left: 3px;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(245, 248, 57);
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.switch:has(input:checked){
+    box-shadow: 2px 0px 20px rgba(184, 184, 184, 0.89);
+}
+
+input:checked + .slider{
+    background-color: #183063;
+}
+
+input:checked + .slider::before {
+    background-color: #ccc;
+    transform: translateX(25px);
+}
+
+
+[data-theme="dark"] .card-tecnologia {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+[data-theme="dark"] details {
+    background: rgba(255,255,255,0.1);
+}
+
+
+[data-theme="dark"] .slide {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+
+
+/* ================== */
+/*  ENTREVISTAS PAGE  */
+/* ================== */
+body[data-theme="dark"] .entrevistado {
+    background: #1e1e1e;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+body[data-theme="dark"] .pergunta {
+    color: #f1f1f1;
+}
+
+body[data-theme="dark"] .resposta {
+    color: #ccc;
+}
+
+body[data-theme="dark"] .qa {
+    background: rgba(255, 255, 255, 0.03);
+}
